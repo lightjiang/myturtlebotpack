@@ -14,13 +14,13 @@
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <rosparam file="$(find myturtlebotpack)/navigation/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
-    <rosparam file="$(find myturtlebotpack)/myturtlebotpack/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find myturtlebotpack)/myturtlebotpack/param/local_costmap_params.yaml" command="load" />
-    <rosparam file="$(find myturtlebotpack)/myturtlebotpack/param/global_costmap_params.yaml" command="load" />
-    <rosparam file="$(find myturtlebotpack)/myturtlebotpack/param/dwa_local_planner_params.yaml" command="load" />
-    <rosparam file="$(find myturtlebotpack)/myturtlebotpack/param/move_base_params.yaml" command="load" />
-    <rosparam file="$(find myturtlebotpack)/myturtlebotpack/param/global_planner_params.yaml" command="load" />
-    <rosparam file="$(find myturtlebotpack)/myturtlebotpack/param/navfn_global_planner_params.yaml" command="load" />
+    <rosparam file="$(find myturtlebotpack)/navigation/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find myturtlebotpack)/navigation/param/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find myturtlebotpack)/navigation/param/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find myturtlebotpack)/navigation/param/dwa_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find myturtlebotpack)/navigation/param/move_base_params.yaml" command="load" />
+    <rosparam file="$(find myturtlebotpack)/navigation/param/global_planner_params.yaml" command="load" />
+    <rosparam file="$(find myturtlebotpack)/navigation/param/navfn_global_planner_params.yaml" command="load" />
     <!-- external params file that could be loaded into the move_base namespace -->
     <rosparam file="$(arg custom_param_file)" command="load" />
     

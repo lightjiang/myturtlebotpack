@@ -38,7 +38,7 @@ class MotionHandler(object):
         self.move(x=0.1, angle=0)#-math.pi/2)
         #self.goal()
 
-    def move(self, x=0.0, angle=0.0, hz=10, speed=0.3, rotate=1.0):
+    def move(self, x=0.0, angle=0.0, hz=10, speed=0.2, rotate=1.0):
         """
         :param x: 前进或后退距离
         :param angle: 旋转角度  正为左转

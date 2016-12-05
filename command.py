@@ -9,5 +9,8 @@ roslaunch turtlebot_navigation amcl_demo.launch map_file:=/home/turtlebot/catkin
 roslaunch myturtlebotpack my.launch
 roslaunch myturtlebotpack amcl_demo.launch
 
+roslaunch turtlebot_rviz_launchers view_navigation.launch --screen
+roslaunch turtlebot_teleop keyboard_teleop.launch
+
 
 """

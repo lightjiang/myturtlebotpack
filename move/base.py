@@ -28,15 +28,16 @@ class MotionHandler(object):
 
     def goal(self):
         goal = MoveBaseGoal()
-        goal.target_pose.header.frame_id = 'base_link'
+        goal.target_pose.header.frame_id = 'map'
         goal.target_pose.header.stamp = rospy.Time.now()
-        goal.target_pose.pose.position.x = 1.0  # 3 meters
+        goal.target_pose.pose.position.x = 1.45  # 3 meters
+        goal.target_pose.pose.position.y = -3.3  # 3 meters
         goal.target_pose.pose.orientation.w = 1.0  # go forward
         self.move_base.send_goal(goal)
 
     def test(self):
-        self.move(x=0, angle=0.3)#-math.pi/2)
-        #self.goal()
+        # self.move(x=0, angle=0.3)#-math.pi/2)
+        self.goal()
 
     def move(self, x=0.0, angle=0.0, hz=10, speed=0.2, rotate=1.0):
         """

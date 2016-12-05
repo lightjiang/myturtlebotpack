@@ -35,8 +35,8 @@ class MotionHandler(object):
         self.move_base.send_goal(goal)
 
     def test(self):
-        # self.move(x=0.3, angle=0)#-math.pi/2)
-        self.goal()
+        self.move(x=0.1, angle=0)#-math.pi/2)
+        #self.goal()
 
     def move(self, x=0.0, angle=0.0, hz=10, speed=0.3, rotate=1.0):
         """

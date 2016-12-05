@@ -14,12 +14,14 @@
          doc="just in case you are considering a 'variant' and want to make use of this."/>
 
     <include file="$(find myturtlebotpack)/launch/includes/robot.launch.xml">
+        <!--机器人外形描述文件-->
         <arg name="base" value="$(arg base)"/>
         <arg name="stacks" value="$(arg stacks)"/>
         <arg name="3d_sensor" value="$(arg 3d_sensor)"/>
     </include>
 
     <include file="$(find myturtlebotpack)/launch/includes/mobile_base.launch.xml">
+        <!--底盘启动程序 运动控制topic cmd_vel_mux-->
         <arg name="base" value="$(arg base)"/>
         <arg name="serialport" value="$(arg serialport)"/>
     </include>

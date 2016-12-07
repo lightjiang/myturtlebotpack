@@ -12,5 +12,6 @@ roslaunch myturtlebotpack amcl_demo.launch
 roslaunch turtlebot_rviz_launchers view_navigation.launch --screen
 roslaunch turtlebot_teleop keyboard_teleop.launch
 
-
+/home/workstation/catkin_ws/src/myturtlebotpack/laser_sdk/output/Linux/Release/ultra_simple
+/home/workstation/catkin_ws/src/myturtlebotpack/laser_sdk/output/Linux/Release/simple_grabber  /dev/ttyUSB0
 """

@@ -3,16 +3,16 @@
     <arg name="base" default="kobuki" doc="mobile base type [create, roomba]"/>
     <arg name="battery" default="/sys/class/power_supply/BAT0"
          doc="kernel provided locatio for battery info, use /proc/acpi/battery/BAT0 in 2.6 or earlier kernels."/>
-    <arg name="stacks" default="$(env TURTLEBOT_STACKS)"
+    <arg name="stacks" default="hexagons"
          doc="stack type displayed in visualisation/simulation [circles, hexagons]"/>
-    <arg name="3d_sensor" default="$(env TURTLEBOT_3D_SENSOR)" doc="3d sensor types [kinect, asux_xtion_pro]"/>
+    <arg name="3d_sensor" default="asus_xtion_pro" doc="3d sensor types [kinect, asux_xtion_pro]"/>
     <arg name="simulation" default="$(env TURTLEBOT_SIMULATION)"
          doc="set flags to indicate this turtle is run in simulation mode."/>
     <arg name="serialport" default="/dev/kobuki"
          doc="used by create to configure the port it is connected on [/dev/ttyUSB0, /dev/ttyS0]"/>
     <arg name="robot_name" default="$(env TURTLEBOT_NAME)"
          doc="used as a unique identifier and occasionally to preconfigure root namespaces, gateway/zeroconf ids etc."/>
-    <arg name="robot_type" default="$(env TURTLEBOT_TYPE)"
+    <arg name="robot_type" default="turtlebot"
          doc="just in case you are considering a 'variant' and want to make use of this."/>
 
     <param name="/use_sim_time" value="$(arg simulation)"/>

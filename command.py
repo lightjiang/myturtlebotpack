@@ -2,6 +2,8 @@
 light
 20161201
 
+git clone https://github.com/lightjiang/myturtlebotpack.git
+
 rosrun rqt_graph rqt_graph
 roslaunch turtlebot_bringup minimal.launch
 roslaunch turtlebot_navigation amcl_demo.launch map_file:=/home/turtlebot/catkin_ws/src/myturtlebotpack/map/floor2.yaml

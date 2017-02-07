@@ -1,6 +1,6 @@
 <launch>
   <!-- Turtlebot -->
-  <arg name="base"              default="$kobuki"         doc="mobile base type [create, roomba]"/>
+  <arg name="base"              default="kobuki"         doc="mobile base type [create, roomba]"/>
   <arg name="battery"           default="/sys/class/power_supply/BAT0"      doc="kernel provided locatio for battery info, use /proc/acpi/battery/BAT0 in 2.6 or earlier kernels." />
   <arg name="stacks"            default="hexagons"       doc="stack type displayed in visualisation/simulation [circles, hexagons]"/>
   <arg name="3d_sensor"         default="asus_xtion_pro"    doc="3d sensor types [kinect, asux_xtion_pro]"/>

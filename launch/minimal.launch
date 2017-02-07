@@ -11,16 +11,16 @@
 
   <param name="/use_sim_time" value="$(arg simulation)"/>
 
-  <include file="$(find turtlebot_bringup)/launch/includes/robot.launch.xml">
+  <include file="$(find myturtlebotpack)/launch/includes/robot.launch.xml">
     <arg name="base" value="$(arg base)" />
     <arg name="stacks" value="$(arg stacks)" />
     <arg name="3d_sensor" value="$(arg 3d_sensor)" />
   </include>
-  <include file="$(find turtlebot_bringup)/launch/includes/mobile_base.launch.xml">
+  <include file="$(find myturtlebotpack)/launch/includes/mobile_base.launch.xml">
     <arg name="base" value="$(arg base)" />
     <arg name="serialport" value="$(arg serialport)" />
   </include>
-  <include file="$(find turtlebot_bringup)/launch/includes/netbook.launch.xml">
+  <include file="$(find myturtlebotpack)/launch/includes/netbook.launch.xml">
     <arg name="battery" value="$(arg battery)" />
   </include>
 
@@ -29,7 +29,7 @@
   <arg name="rapp_auto_start"                   default=""       doc="pick an app to autostart, e.g. 'rocon_apps/talker'"/>
   <arg name="rapp_package_whitelist"            default="$(env TURTLEBOT_RAPP_PACKAGE_WHITELIST)" doc="a list of catkin packages that provide rapps to be loaded by the app manager."/>
   <arg name="rapp_package_blacklist"            default="$(env TURTLEBOT_RAPP_PACKAGE_BLACKLIST)" doc="a list of catkin packages to blacklist from providing rapps."/>
-  <arg name="rapp_preferred_configuration_file" default="$(find turtlebot_bringup)/param/preferred_rapp.yaml" doc="a configuration of preferred rapps"/>
+  <arg name="rapp_preferred_configuration_file" default="$(find myturtlebotpack)/param/preferred_rapp.yaml" doc="a configuration of preferred rapps"/>
   <arg name="robot_icon"                        default="turtlebot_bringup/turtlebot2.png"        doc="passed to user interfaces to socialise the turtlebot's appearance"/>
   <arg name="rapp_verbose"                      default="true"   doc="show verbose output from running apps (aka roslaunch --screen)"/>
 
@@ -40,7 +40,7 @@
   <arg name="capabilities"                      default="true" doc="start and register an underlying capability server"/>
   <arg name="capabilities_server_name"          default="capability_server"/>
   <arg name="capabilities_nodelet_manager_name" default="capability_server_nodelet_manager" />
-  <arg name="capabilities_parameters"           default="$(find turtlebot_bringup)/param/capabilities/defaults_tb2.yaml"  doc="preload the capability server with this configurations" /> <!-- defaults_tb.yaml, defaults_tb2.yaml -->
+  <arg name="capabilities_parameters"           default="$(find capabilities)/param/capabilities/defaults_tb2.yaml"  doc="preload the capability server with this configurations" /> <!-- defaults_tb.yaml, defaults_tb2.yaml -->
   <arg name="capabilities_package_whitelist"    default="[kobuki_capabilities, std_capabilities, turtlebot_capabilities]" doc="register capabilities from these packages only" /> 
   <arg name="capabilities_blacklist"            default="['std_capabilities/Navigation2D', 'std_capabilities/MultiEchoLaserSensor']" doc="blacklist these specific capabilities from being registered" />
 

@@ -10,7 +10,7 @@ from sensor_msgs.msg import LaserScan
 
 class LaserData(object):
     def __init__(self, data):
-        rospy.loginfo( min(list(set(data.ranges))))
+        rospy.loginfo(min(list(set(data.ranges))))
 
 
 def listener():

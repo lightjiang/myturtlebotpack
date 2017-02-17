@@ -6,7 +6,7 @@ git clone https://github.com/lightjiang/myturtlebotpack.git
 
 rosrun rqt_graph rqt_graph
 roslaunch turtlebot_bringup minimal.launch
-roslaunch turtlebot_navigation amcl_demo.launch map_file:=/home/turtlebot/catkin_ws/src/myturtlebotpack/map/floor2.yaml
+roslaunch turtlebot_navigation amcl_demo.launch map_file:=/home/turtlebot/catkin_ws/src/myturtlebotpack/map/test21.yaml
 roslaunch turtlebot_navigation gmapping_demo.launch
 rosrun map_server map_saver -f /home/turtlebot/catkin_ws/src/myturtlebotpack/map/test21
 
@@ -22,5 +22,7 @@ roslaunch turtlebot_teleop keyboard_teleop.launch
 roslaunch myturtlebotpack gmapping_demo.launch
 
 rosrun rqt_graph rqt_graph
+
+catkin_make -DCATKIN_WHITELIST_PACKAGES=""
 
 """

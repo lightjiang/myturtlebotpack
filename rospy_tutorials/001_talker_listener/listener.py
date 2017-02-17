@@ -37,13 +37,29 @@
 ## to the 'chatter' topic
 
 import rospy
+from PIL import Image
 from std_msgs.msg import String
+from nav_msgs.msg import OccupancyGrid
+from map_msgs.msg import OccupancyGridUpdate
 
+import time
 def callback(data):
-    rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
+    print([data.info])
+    width = data.info.width
+    height = data.info.height
+    mymap = Image.new("L", (width, height), color=255)
+    print(width*height, len(data.data))
+    print set(data.data)
+    for y in range(0, height):
+        for x in range(0, width):
+            i = data.data[(x+1)*(y+1)-1]
+            if i == -1:
+                i = 255
+            mymap.putpixel((x, y), i)
+    # mymap.save("/home/workstation/Desktop/2.jpg")
+    mymap.show()
 
 def listener():
-
     # In ROS, nodes are uniquely named. If two nodes with the same
     # node are launched, the previous one is kicked off. The
     # anonymous=True flag means that rospy will choose a unique
@@ -51,7 +67,7 @@ def listener():
     # run simultaneously.
     rospy.init_node('listener', anonymous=True)
 
-    rospy.Subscriber("chatter", String, callback)
+    rospy.Subscriber("/map", OccupancyGrid, callback)
 
     # spin() simply keeps python from exiting until this node is stopped
     rospy.spin()

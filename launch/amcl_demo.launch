@@ -12,7 +12,7 @@
   </include>
 
   <!-- Map server -->
-  <arg name="map_file" default="$(find myturtlebotpack)/map/test21.yaml"/>
+  <arg name="map_file" default="$(find myturtlebotpack)/map/te2.yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
 
   <!-- AMCL -->

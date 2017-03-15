@@ -102,4 +102,8 @@
         <arg name="zeroconf_port" value="$(arg zeroconf_port)"/>
 
     </include>
+
+    <include file="$(find myturtlebotpack)/launch/amcl_demo.launch">
+        <arg name="map_file" default="$(find myturtlebotpack)/map/te2.yaml"/>
+    </include>
 </launch>

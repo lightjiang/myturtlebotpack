@@ -45,6 +45,7 @@ from PIL import Image
 # imports the AddTwoInts service 
 from rospy_tutorials.srv import *
 from nav_msgs.srv import GetMap
+from std_srvs.srv import Empty
 
 
 def call_map():
@@ -108,4 +109,6 @@ def usage():
     return "%s [x y]"%sys.argv[0]
 
 if __name__ == "__main__":
-    call_map()
+    rospy.wait_for_service('/move_base/clear_costmaps')
+    a = rospy.ServiceProxy('/move_base/clear_costmaps', Empty)
+    a.call()

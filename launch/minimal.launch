@@ -104,6 +104,6 @@
     </include>
 
     <include file="$(find myturtlebotpack)/launch/amcl_demo.launch">
-        <arg name="map_file" default="$(find myturtlebotpack)/map/te2.yaml"/>
+        <arg name="map_file" default="$(find myturtlebotpack)/map/test21.yaml"/>
     </include>
 </launch>
